@@ -1,0 +1,45 @@
+@import url(https://rsms.me/inter/inter.css);
+:root {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+body {
+  background-color: rgb(41, 48, 55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+#commandList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#commandList div {
+  background-color: rgb(32, 34, 42);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 10px;
+}
+#commandList div h3 {
+  font-weight: 450;
+}
+#commandList div h3 i {
+  color: grey;
+  font-weight: 300;
+  padding-right: 0.1rem;
+  padding-left: 0.1rem;
+}/*# sourceMappingURL=style.css.map */
