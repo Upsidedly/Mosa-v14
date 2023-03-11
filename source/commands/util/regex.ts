@@ -1,6 +1,9 @@
 import { ChatInputCommand, Command } from '@sapphire/framework';
-import { ActionRow, ActionRowBuilder, ButtonBuilder, Message, TextChannel } from 'discord.js';
+import { Message } from 'discord.js';
 import got from 'got';
+import safe from 'safe-regex2'
+
+/\s/
 
 export class PingCommand extends Command {
     public constructor(context: Command.Context, options: Command.Options) {
@@ -14,7 +17,7 @@ export class PingCommand extends Command {
 
     public override registerApplicationCommands(registry: ChatInputCommand.Registry) {
         registry.registerChatInputCommand((builder) =>
-            builder.setName('regex').setDescription(`test a regex query (1.0.0)`)
+            builder.setName('regex').setDescription(`test a regex query (1.0.0)`).addStringOption((s) => s.setName('regex').setDescription('The regex to query').setRequired())
             , { idHints: ['1083957939590660116'] });
     }
 

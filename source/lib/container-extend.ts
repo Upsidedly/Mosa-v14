@@ -1,12 +1,9 @@
 import { container } from '@sapphire/framework';
 
-const upDate = Date.now()
+const start = Date.now()
+container.uptime = () => Date.now() - start;
 
-const uptime = () => Date.now() - upDate
-
-container.uptime = uptime;
-
-declare module '@sapphire/framework' {
+declare module '@sapphire/pieces' {
     export interface Container {
         uptime: () => number;
     }
